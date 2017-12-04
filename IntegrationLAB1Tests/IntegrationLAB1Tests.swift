@@ -22,6 +22,7 @@ class IntegrationLAB1Tests: XCTestCase {
     }
     
     func testExample() {
+        XCTAssert(true)
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
