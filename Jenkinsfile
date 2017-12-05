@@ -16,7 +16,6 @@ node {
 
         // Build and Test
         sh 'xcodebuild -scheme "IntegrationLAB1" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone X,OS=11.1" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
-
         // Publish test restults.
         step([$class: 'JUnitResultArchiver', allowEmptyResults: true, testResults: 'build/reports/junit.xml'])
     }
