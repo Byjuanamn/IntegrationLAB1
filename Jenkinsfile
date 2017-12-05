@@ -5,7 +5,7 @@ node {
         // Checkout files.
         checkout([
             $class: 'GitSCM',
-            branches: [[name: 'master']],
+            branches: [[name: 'uitest']],
             doGenerateSubmoduleConfigurations: false,
             extensions: [], submoduleCfg: [],
             userRemoteConfigs: [[
@@ -39,5 +39,9 @@ node {
             // Publish checkstyle result
             step([$class: 'CheckStylePublisher', canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'checkstyle.xml', unHealthy: ''])
         }, failFast: true|false   
+    }
+
+    stage('') {
+
     }
 }
