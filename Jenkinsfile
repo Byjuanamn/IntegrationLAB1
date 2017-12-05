@@ -5,7 +5,7 @@ node {
         // Checkout files.
         checkout([
             $class: 'GitSCM',
-            branches: [[name: 'master']],
+            branches: [[name: 'uitest']],
             doGenerateSubmoduleConfigurations: false,
             extensions: [], submoduleCfg: [],
             userRemoteConfigs: [[
@@ -40,7 +40,8 @@ node {
         }, failFast: true|false   
     }
 
-    stage('') {
+    stage('Pantallazos') {
+        sh 'fastlane ui_test_snapshot'
 
     }
 }
