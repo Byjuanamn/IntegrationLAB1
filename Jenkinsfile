@@ -40,11 +40,7 @@ node {
         }, failFast: true|false   
     }
 
-<<<<<<< HEAD
      stage('Pantallazos') {
-=======
-    stage('Pantallazos') {
->>>>>>> uitest
         sh 'fastlane ui_test_snapshot'
 
     }
