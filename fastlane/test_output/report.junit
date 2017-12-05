@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='IntegrationLAB1UITests.xctest' tests='4' failures='0'>
+  <testsuite name='IntegrationLAB1Tests.IntegrationLAB1Tests' tests='3' failures='0'>
+    <testcase classname='IntegrationLAB1Tests.IntegrationLAB1Tests' name='testExample' time='0.001'/>
+    <testcase classname='IntegrationLAB1Tests.IntegrationLAB1Tests' name='testExampleTwo' time='0.000'/>
+    <testcase classname='IntegrationLAB1Tests.IntegrationLAB1Tests' name='testPerformanceExample' time='0.321'/>
+  </testsuite>
+  <testsuite name='IntegrationLAB1UITests.IntegrationLAB1UITests' tests='1' failures='0'>
+    <testcase classname='IntegrationLAB1UITests.IntegrationLAB1UITests' name='testTouchUpInsideMainButton' time='5.057'/>
+  </testsuite>
+</testsuites>

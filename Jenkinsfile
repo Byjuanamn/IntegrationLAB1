@@ -5,7 +5,7 @@ node {
         // Checkout files.
         checkout([
             $class: 'GitSCM',
-            branches: [[name: 'master']],
+            branches: [[name: 'uitest']],
             doGenerateSubmoduleConfigurations: false,
             extensions: [], submoduleCfg: [],
             userRemoteConfigs: [[
@@ -13,8 +13,7 @@ node {
                 url: 'https://github.com/Byjuanamn/IntegrationLAB1'
             ]]
         ])
-
-        // Build and Test
+         // Build and Test
         sh 'xcodebuild -scheme "IntegrationLAB1" -configuration "Debug" build test -destination "platform=iOS Simulator,name=iPhone X,OS=11.1" -enableCodeCoverage YES | /usr/local/bin/xcpretty -r junit'
 
         // Publish test restults.
@@ -41,7 +40,11 @@ node {
         }, failFast: true|false   
     }
 
+<<<<<<< HEAD
      stage('Pantallazos') {
+=======
+    stage('Pantallazos') {
+>>>>>>> uitest
         sh 'fastlane ui_test_snapshot'
 
     }
