@@ -40,4 +40,9 @@ node {
             step([$class: 'CheckStylePublisher', canComputeNew: false, defaultEncoding: '', healthy: '', pattern: 'checkstyle.xml', unHealthy: ''])
         }, failFast: true|false   
     }
+
+     stage('Pantallazos') {
+        sh 'fastlane ui_test_snapshot'
+
+    }
 }
